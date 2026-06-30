@@ -1,505 +1,251 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sepehr Asgarian | Data Scientist & ML Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-    <style>
-        .skill-bar {
-            transition: width 1.5s ease-in-out;
-        }
-        @keyframes shine {
-            0% { background-position: -200% }
-            100% { background-position: 200% }
-        }
-        .golden-text {
-            background: linear-gradient(90deg, #ffdd00, #ffbf00, #ff9500, #ffdd00);
-            background-size: 200% auto;
-            color: transparent;
-            background-clip: text;
-            -webkit-background-clip: text;
-            animation: shine 2s linear infinite;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .project-card {
-            transition: all 0.3s ease;
-        }
-        #vanta-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sepehr Asgarian | Data Scientist & ML Engineer</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 </head>
-<body class="bg-transparent text-gray-100 font-sans">
-    <div id="vanta-bg"></div>
-    
-    <!-- Navigation -->
-    <nav class="container mx-auto px-6 py-4 glass-effect">
-        <div class="flex items-center justify-between">
-            <div class="text-2xl font-bold text-blue-400">Sepehr Asgarian</div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="hover:text-blue-400 transition">About</a>
-                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
-                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
-                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
-            </div>
-            <button class="md:hidden focus:outline-none">
-                <i data-feather="menu"></i>
-            </button>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section id="about" class="container mx-auto px-6 py-20 md:py-32">
-        <div class="flex flex-col md:flex-row items-center glass-effect p-8">
-            <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hello, I'm <span class="text-blue-400">Sepehr Asgarian</span></h1>
-                <h2 class="text-2xl md:text-3xl text-blue-300 mb-6">Data Scientist & ML Engineer</h2>
-                <p class="text-lg text-gray-300 mb-8 max-w-lg">
-                    Data Scientist and aspiring Machine Learning Engineer with expertise in Python, data analysis, and computer vision. 
-                    Currently pursuing Computer Engineering degree with a focus on applying machine learning solutions to real-world problems.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition">Contact Me</a>
-                    <a href="#projects" class="border border-blue-400 text-blue-400 hover:bg-blue-900 px-6 py-3 rounded-lg transition">View Projects</a>
-                </div>
-            </div>
-            <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
-                <div class="relative">
-                    <div class="w-64 h-64 md:w-80 md:h-80 bg-blue-900 rounded-full opacity-20 absolute -inset-0 m-auto blur-xl"></div>
-                    <img src="https://avatars.githubusercontent.com/u/139703729?v=4" alt="Profile" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover relative">
-                </div>
-            </div>
-        </div>
-    </section>
-   
+<body>
+  <div id="vanta-bg"></div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-20">
-        <div class="container mx-auto px-6 glass-effect p-8">
-            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">My <span class="text-blue-400">Skills</span></h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Column 1 -->
-                <div data-aos="fade-up" data-aos-delay="100">
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">Python</span>
-                            <span class="text-blue-400">100%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 100%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">Pandas</span>
-                            <span class="text-blue-400">100%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 100%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">NumPy</span>
-                            <span class="text-blue-400">100%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 100%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">Scikit-learn</span>
-                            <span class="text-blue-400">80%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Column 2 -->
-                <div data-aos="fade-up" data-aos-delay="200">
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">TensorFlow</span>
-                            <span class="text-blue-400">80%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">Computer Vision</span>
-                            <span class="text-blue-400">80%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">Power BI</span>
-                            <span class="text-blue-400">80%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">Data Analysis</span>
-                            <span class="text-blue-400">100%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 100%"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Column 3 -->
-                <div data-aos="fade-up" data-aos-delay="300">
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">Statistical Analysis</span>
-                            <span class="text-blue-400">80%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">Data Visualization</span>
-                            <span class="text-blue-400">80%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">Docker</span>
-                            <span class="text-blue-400">80%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">Git</span>
-                            <span class="text-blue-400">80%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Additional Skills -->
-            <div class="mt-12" data-aos="fade-up">
-                <h3 class="text-xl font-semibold text-center mb-6 text-blue-300">Additional Skills</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div data-aos="fade-up" data-aos-delay="400">
-                        <div class="mb-6">
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-300">Polars</span>
-                                <span class="text-blue-400">80%</span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-6">
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-300">MLflow</span>
-                                <span class="text-blue-400">80%</span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="mb-6">
-                            <div class="flex justify-between mb-2">
-                                <span class="text-gray-300">Linux</span>
-                                <span class="text-blue-400">60%</span>
-                            </div>
-                            <div class="w-full bg-gray-700 rounded-full h-2.5">
-                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 60%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Other Technologies Section -->
-            <div class="mt-16" data-aos="fade-up">
-                <h3 class="text-xl font-semibold text-center mb-8">
-                    <span class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-transparent bg-clip-text">
-                        Other Technologies I Work With
-                    </span>
-                </h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-lg mx-auto">
-                    <div class="relative group">
-                        <div class="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                        <div class="relative bg-gray-900 rounded-lg px-6 py-4 text-center">
-                            <h4 class="text-yellow-400 font-bold text-lg">SQL</h4>
-                        </div>
-                    </div>
-                    <div class="relative group">
-                        <div class="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                        <div class="relative bg-gray-900 rounded-lg px-6 py-4 text-center">
-                            <h4 class="text-yellow-400 font-bold text-lg">LangChain</h4>
-                        </div>
-                    </div>
-                    <div class="relative group">
-                        <div class="absolute -inset-0.5 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                        <div class="relative bg-gray-900 rounded-lg px-6 py-4 text-center">
-                            <h4 class="text-yellow-400 font-bold text-lg">FastAPI</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <nav class="container mx-auto px-6 py-4 glass-effect nav-box">
+    <div class="flex items-center justify-between">
+      <h1 class="text-2xl font-bold text-blue-400">Sepehr Asgarian</h1>
+
+      <div class="hidden md:flex gap-8">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <button class="md:hidden">
+        <i data-feather="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero container mx-auto px-6 py-24">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <p class="text-blue-400 font-semibold mb-4">Computer Engineering Student</p>
+
+          <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+            Building Smart Apps with
+            <span class="golden-text">AI, Data & Backend</span>
+          </h2>
+
+          <p class="text-gray-300 text-lg mb-8">
+            I’m Sepehr Asgarian, focused on Python, Machine Learning, FastAPI,
+            SQL, and building real-world software projects that solve practical problems.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="#contact" class="btn-secondary">Contact Me</a>
+          </div>
         </div>
+
+        <div class="profile-card glass-effect" data-aos="fade-left">
+          <img
+            src="https://raw.githubusercontent.com/sepehr21ar/sepehr21ar.github.io/main/Screenshot%202026-06-30%20211317.png"
+            alt="Menu project preview"
+            class="hero-image"
+          />
+        </div>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20">
-        <div class="container mx-auto px-6 glass-effect p-8">
-            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">My <span class="text-blue-400">Projects</span></h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <!-- Project 1 -->
-                <div class="project-card bg-gray-800 rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://static.photos/technology/640x360/5" alt="Store_model" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Store_model</h3>
-                        <p class="text-gray-300 mb-4">Store data modeling and analysis project.</p>
-                        <div class="flex flex-wrap gap-4">
-                            <a href="https://github.com/sepehr21ar/Store_model" target="_blank" class="text-blue-400 hover:text-blue-300 flex items-center">
-                                <i data-feather="github" class="mr-2"></i> View on GitHub
-                            </a>
-                            <a href="https://sepehr21ar.github.io/Store_model/" target="_blank" class="text-blue-400 hover:text-blue-300 flex items-center">
-                                <i data-feather="external-link" class="mr-2"></i> Live Page
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card bg-gray-800 rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                    <img src="https://static.photos/office/640x360/2" alt="admin_messanger" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">admin_messanger</h3>
-                        <p class="text-gray-300 mb-4">Admin messaging project for managing communication workflows.</p>
-                        <a href="https://github.com/sepehr21ar/admin_messanger" target="_blank" class="text-blue-400 hover:text-blue-300 flex items-center">
-                            <i data-feather="github" class="mr-2"></i> View on GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card bg-gray-800 rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-                    <img src="https://static.photos/food/640x360/3" alt="Menu" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Menu</h3>
-                        <p class="text-gray-300 mb-4">Interactive menu project with a public page preview.</p>
-                        <div class="flex flex-wrap gap-4">
-                            <a href="https://github.com/sepehr21ar/Menu" target="_blank" class="text-blue-400 hover:text-blue-300 flex items-center">
-                                <i data-feather="github" class="mr-2"></i> View on GitHub
-                            </a>
-                            <a href="https://sepehr21ar.github.io/Menu/" target="_blank" class="text-blue-400 hover:text-blue-300 flex items-center">
-                                <i data-feather="external-link" class="mr-2"></i> Live Page
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card bg-gray-800 rounded-xl overflow-hidden" data-aos="fade-up" data-aos-delay="400">
-                    <img src="https://static.photos/education/640x360/4" alt="Multi-lang-Summarizer" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Multi-lang-Summarizer</h3>
-                        <p class="text-gray-300 mb-4">Multilingual summarization project for working with text in different languages.</p>
-                        <a href="https://github.com/sepehr21ar/Multi-lang-Summarizer" target="_blank" class="text-blue-400 hover:text-blue-300 flex items-center">
-                            <i data-feather="github" class="mr-2"></i> View on GitHub
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="about" class="container mx-auto px-6 py-16">
+      <div class="glass-effect section-card" data-aos="fade-up">
+        <h2 class="section-title">About Me</h2>
+        <p class="text-gray-300 leading-8">
+          I’m a Computer Engineering student interested in Machine Learning,
+          data-driven applications, backend development, and AI agents.
+          My goal is to build useful projects and grow toward Data Science,
+          ML Engineering, and intelligent software systems.
+        </p>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20">
-        <div class="container mx-auto px-6 glass-effect p-8">
-            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">Get <span class="text-blue-400">In Touch</span></h2>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="rounded-xl p-8" data-aos="fade-up">
-                    <p class="text-lg text-center text-gray-300 mb-8">
-                        I'm always open to new opportunities and collaborations. Let's discuss how we can work together on your next project.
-                    </p>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div>
-                            <div class="flex items-center mb-6">
-                                <div class="bg-blue-900 p-3 rounded-full mr-4">
-                                    <i data-feather="mail" class="text-blue-400"></i>
-                                </div>
-                                <div>
-                                    <h3 class="font-semibold">Email</h3>
-                                    <a href="mailto:sepehr.asgarian21@gmail.com" class="text-blue-400 hover:underline">sepehr.asgarian21@gmail.com</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center mb-6">
-                                <div class="bg-blue-900 p-3 rounded-full mr-4">
-                                    <i data-feather="map-pin" class="text-blue-400"></i>
-                                </div>
-                                <div>
-                                    <h3 class="font-semibold">Location</h3>
-                                    <p class="text-gray-300">Tehran, Iran</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <div class="flex items-center mb-6">
-                                <div class="bg-blue-900 p-3 rounded-full mr-4">
-                                    <i data-feather="github" class="text-blue-400"></i>
-                                </div>
-                                <div>
-                                    <h3 class="font-semibold">GitHub</h3>
-                                    <a href="https://github.com/sepehr21ar" target="_blank" class="text-blue-400 hover:underline">github.com/sepehr21ar</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center">
-                                <div class="bg-blue-900 p-3 rounded-full mr-4">
-                                    <i data-feather="linkedin" class="text-blue-400"></i>
-                                </div>
-                                <div>
-                                    <h3 class="font-semibold">LinkedIn</h3>
-                                    <a href="https://www.linkedin.com/in/sepehr21ar" target="_blank" class="text-blue-400 hover:underline">linkedin.com/in/sepehr21ar</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                        <!-- Demo Video Section -->
-                        <section id="demo" class="py-12">
-                          <div class="container mx-auto px-6 glass-effect p-8 text-center" data-aos="fade-up">
-                            <h2 class="text-3xl font-bold mb-8">
-                              🎬 <span class="text-blue-400">Take a Look</span>
-                            </h2>
-                            
-                            <video 
-                              src="https://github.com/sepehr21ar/assets/raw/main/grok-video-452bcae9-83a9-42d9-8ddc-d16ab9414646.mp4"
-                              controls
-                              autoplay
-                              muted
-                              loop
-                              playsinline
-                              class="rounded-2xl mx-auto shadow-2xl border border-blue-900/30"
-                              style="max-width: 320px; width: 100%; height: auto;">
-                              Your browser does not support the video tag.
-                            </video>
-                        
-                            <p class="mt-4 text-gray-400">
-                              <a href="https://github.com/sepehr21ar/assets/raw/main/grok-video-452bcae9-83a9-42d9-8ddc-d16ab9414646.mp4"
-                                 target="_blank"
-                                 class="text-blue-400 hover:text-blue-300 underline">
-                                 Click here if the video doesn’t load
-                              </a>
-                            </p>
-                          </div>
-                        </section>
-                </div>
-            </div>
+    <section id="skills" class="container mx-auto px-6 py-16">
+      <div class="glass-effect section-card" data-aos="fade-up">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="skill-card">Python</div>
+          <div class="skill-card">Machine Learning</div>
+          <div class="skill-card">FastAPI</div>
+          <div class="skill-card">SQL / Databases</div>
+          <div class="skill-card">Pandas & NumPy</div>
+          <div class="skill-card">LangChain / AI Agents</div>
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="py-8">
-        <div class="container mx-auto px-6 text-center glass-effect p-4">
-            <p class="text-gray-400">© 2023 Sepehr Asgarian. All rights reserved.</p>
-        </div>
-    </footer>
+    <section id="projects" class="container mx-auto px-6 py-16">
+      <div class="glass-effect section-card" data-aos="fade-up">
+        <h2 class="section-title">Projects</h2>
 
-    <script>
-        // Initialize Vanta.js animated background
-        if (document.getElementById('vanta-bg')) {
-            VANTA.NET({
-                el: "#vanta-bg",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                scale: 1.00,
-                scaleMobile: 1.00,
-                color: 0x3b82f6,
-                backgroundColor: 0x111827,
-                points: 12.00,
-                maxDistance: 23.00,
-                spacing: 18.00
-            });
-        }
-        // Initialize AOS animations
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-        // Initialize feather icons
-        feather.replace();
-        // Animate skill bars on scroll
-        document.addEventListener('DOMContentLoaded', function() {
-            const skillBars = document.querySelectorAll('.skill-bar');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const width = entry.target.style.width;
-                        entry.target.style.width = '0';
-                        setTimeout(() => {
-                            entry.target.style.width = width;
-                        }, 100);
-                    }
-                });
-            }, {threshold: 0.5});
-            skillBars.forEach(bar => {
-                observer.observe(bar);
-            });
-        });
-    </script>
+        <div class="grid md:grid-cols-2 gap-8">
+          <article class="project-card">
+            <img
+              src="https://raw.githubusercontent.com/sepehr21ar/sepehr21ar.github.io/main/Screenshot%202026-06-30%20211317.png"
+              alt="Digital Menu App"
+              class="project-img"
+            />
+
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3 text-blue-400">
+                Digital Restaurant Menu
+              </h3>
+
+              <p class="text-gray-300 mb-4">
+                A FastAPI web app for restaurants to create digital menus with
+                categories, items, prices, images, and QR-based access.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span class="tag">FastAPI</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">HTML/CSS</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img
+              src="https://img.magnific.com/free-vector/store-grocery-shop-building-isolated-white-background_1284-14054.jpg?semt=ais_hybrid&w=740&q=80"
+              alt="Store Management App"
+              class="project-img"
+            />
+
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3 text-blue-400">
+                Store Management System
+              </h3>
+
+              <p class="text-gray-300 mb-4">
+                A store dashboard project with product management, inventory,
+                sales reports, SQL queries, and AI-powered data analysis.
+              </p>
+
+              <div class="flex flex-wrap gap-2">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">AI Agent</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="container mx-auto px-6 py-16">
+      <div class="glass-effect section-card text-center" data-aos="fade-up">
+        <h2 class="section-title">Demo Video</h2>
+
+        <video
+          src="https://github.com/sepehr21ar/assets/raw/main/grok-video-452bcae9-83a9-42d9-8ddc-d16ab9414646.mp4"
+          controls
+          autoplay
+          muted
+          loop
+          playsinline
+          class="demo-video"
+        >
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </section>
+
+    <section id="contact" class="container mx-auto px-6 py-16">
+      <div class="glass-effect section-card" data-aos="fade-up">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="contact-item">
+            <i data-feather="map-pin"></i>
+            <div>
+              <h3>Location</h3>
+              <p>Tehran, Iran</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i data-feather="github"></i>
+            <div>
+              <h3>GitHub</h3>
+              <a href="https://github.com/sepehr21ar" target="_blank">
+                github.com/sepehr21ar
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i data-feather="linkedin"></i>
+            <div>
+              <h3>LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/sepehr21ar" target="_blank">
+                linkedin.com/in/sepehr21ar
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i data-feather="mail"></i>
+            <div>
+              <h3>Email</h3>
+              <p>Available on request</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container mx-auto px-6 py-8 text-center">
+    <div class="glass-effect p-4">
+      <p class="text-gray-400">© 2026 Sepehr Asgarian. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    VANTA.NET({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200,
+      minWidth: 200,
+      scale: 1,
+      scaleMobile: 1,
+      color: 0x3b82f6,
+      backgroundColor: 0x0f172a,
+      points: 12,
+      maxDistance: 23,
+      spacing: 18
+    });
+
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+      once: true
+    });
+
+    feather.replace();
+  </script>
 </body>
 </html>
