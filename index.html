@@ -1,40 +1,35 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Sepehr Asgarian | Data Scientist & ML Engineer</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
     <style>
-        .skill-bar {
-            transition: width 1.5s ease-in-out;
+        html {
+            scroll-behavior: smooth;
+            background: #020617;
         }
-        @keyframes shine {
-            0% { background-position: -200% }
-            100% { background-position: 200% }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            overflow-x: hidden;
+            background: transparent;
         }
-        .golden-text {
-            background: linear-gradient(90deg, #ffdd00, #ffbf00, #ff9500, #ffdd00);
-            background-size: 200% auto;
-            color: transparent;
-            background-clip: text;
-            -webkit-background-clip: text;
-            animation: shine 2s linear infinite;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .project-card {
-            transition: all 0.3s ease;
-        }
+
         #vanta-bg {
             position: fixed;
             top: 0;
@@ -43,30 +38,90 @@
             height: 100%;
             z-index: -1;
         }
+
         .glass-effect {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 12px;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            background: rgba(15, 23, 42, 0.72);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(96, 165, 250, 0.28);
+            border-radius: 18px;
+            box-shadow: 0 20px 60px rgba(15, 23, 42, 0.35);
+        }
+
+        .skill-bar {
+            transition: width 1.5s ease-in-out;
+        }
+
+        @keyframes shine {
+            0% {
+                background-position: -200%;
+            }
+
+            100% {
+                background-position: 200%;
+            }
+        }
+
+        .golden-text {
+            background: linear-gradient(90deg, #ffdd00, #ffbf00, #ff9500, #ffdd00);
+            background-size: 200% auto;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: shine 2s linear infinite;
+        }
+
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.25),
+                        0 10px 10px -5px rgba(37, 99, 235, 0.16);
+        }
+
+        .nav-link {
+            color: #bfdbfe;
+            transition: 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #60a5fa;
+        }
+
+        .blue-text {
+            color: #93c5fd;
+        }
+
+        .soft-blue-text {
+            color: #bfdbfe;
+        }
+
+        .muted-blue-text {
+            color: #dbeafe;
         }
     </style>
 </head>
-<body class="bg-transparent text-gray-100 font-sans">
+
+<body class="font-sans">
     <div id="vanta-bg"></div>
-    
+
     <!-- Navigation -->
-    <nav class="container mx-auto px-6 py-4 glass-effect">
+    <nav class="container mx-auto px-6 py-4 mt-4 glass-effect">
         <div class="flex items-center justify-between">
-            <div class="text-2xl font-bold text-blue-400">Sepehr Asgarian</div>
-            <div class="hidden md:flex space-x-8">
-                <a href="#about" class="hover:text-blue-400 transition">About</a>
-                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
-                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
-                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            <div class="text-2xl font-bold text-blue-400">
+                Sepehr Asgarian
             </div>
-            <button class="md:hidden focus:outline-none">
+
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <button class="md:hidden focus:outline-none text-blue-300">
                 <i data-feather="menu"></i>
             </button>
         </div>
@@ -76,80 +131,368 @@
     <section id="about" class="container mx-auto px-6 py-20 md:py-32">
         <div class="flex flex-col md:flex-row items-center glass-effect p-8">
             <div class="md:w-1/2 mb-10 md:mb-0" data-aos="fade-right">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hello, I'm <span class="text-blue-400">Sepehr Asgarian</span></h1>
-                <h2 class="text-2xl md:text-3xl text-blue-300 mb-6">Data Scientist & ML Engineer</h2>
-                <p class="text-lg text-gray-300 mb-8 max-w-lg">
-                    Data Scientist and aspiring Machine Learning Engineer with expertise in Python, data analysis, and computer vision. 
-                    Currently pursuing Computer Engineering degree with a focus on applying machine learning solutions to real-world problems.
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 text-blue-100">
+                    Hello, I'm
+                    <span class="text-blue-400">Sepehr Asgarian</span>
+                </h1>
+
+                <h2 class="text-2xl md:text-3xl text-blue-300 mb-6">
+                    Data Scientist & ML Engineer
+                </h2>
+
+                <p class="text-lg text-blue-100 mb-8 max-w-lg">
+                    Data Scientist and aspiring Machine Learning Engineer with expertise in Python,
+                    data analysis, and computer vision. Currently pursuing Computer Engineering
+                    degree with a focus on applying machine learning solutions to real-world problems.
                 </p>
-                <div class="flex space-x-4">
-                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition">Contact Me</a>
-                    <a href="#projects" class="border border-blue-400 text-blue-400 hover:bg-blue-900 px-6 py-3 rounded-lg transition">View Projects</a>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="#contact"
+                       class="bg-blue-600 hover:bg-blue-700 text-blue-50 px-6 py-3 rounded-lg transition">
+                        Contact Me
+                    </a>
+
+                    <a href="#projects"
+                       class="border border-blue-400 text-blue-300 hover:bg-blue-950 px-6 py-3 rounded-lg transition">
+                        View Projects
+                    </a>
                 </div>
             </div>
+
             <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
                 <div class="relative">
-                    <div class="w-64 h-64 md:w-80 md:h-80 bg-blue-900 rounded-full opacity-20 absolute -inset-0 m-auto blur-xl"></div>
-                    <img src="https://avatars.githubusercontent.com/u/139703729?v=4" alt="Profile" class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-blue-900 rounded-full opacity-30 absolute -inset-0 m-auto blur-xl"></div>
+
+                    <img src="https://avatars.githubusercontent.com/u/139703729?v=4"
+                         alt="Profile"
+                         class="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover relative border-4 border-blue-400/40 shadow-2xl">
                 </div>
             </div>
         </div>
     </section>
-   
 
     <!-- Skills Section -->
     <section id="skills" class="py-20">
-        <div class="container mx-auto px-6 glass-effect p-8">
-            <h2 class="text-3xl font-bold text-center mb-16" data-aos="fade-up">My <span class="text-blue-400">Skills</span></h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Column 1 -->
-                <div data-aos="fade-up" data-aos-delay="100">
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">Python</span>
-                            <span class="text-blue-400">100%</span>
+        <div class="container mx-auto px-6">
+            <div class="glass-effect p-8">
+                <h2 class="text-3xl font-bold text-center mb-16 text-blue-100" data-aos="fade-up">
+                    My <span class="text-blue-400">Skills</span>
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Column 1 -->
+                    <div data-aos="fade-up" data-aos-delay="100">
+
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-blue-300">Python</span>
+                                <span class="text-blue-400">100%</span>
+                            </div>
+
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 100%"></div>
+                            </div>
                         </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 100%"></div>
+
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-blue-300">Pandas</span>
+                                <span class="text-blue-400">100%</span>
+                            </div>
+
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 100%"></div>
+                            </div>
                         </div>
+
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-blue-300">NumPy</span>
+                                <span class="text-blue-400">100%</span>
+                            </div>
+
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-blue-300">Scikit-learn</span>
+                                <span class="text-blue-400">80%</span>
+                            </div>
+
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">Pandas</span>
-                            <span class="text-blue-400">100%</span>
+
+                    <!-- Column 2 -->
+                    <div data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-blue-300">Machine Learning</span>
+                                <span class="text-blue-400">85%</span>
+                            </div>
+
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div>
+                            </div>
                         </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 100%"></div>
+
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-blue-300">Data Analysis</span>
+                                <span class="text-blue-400">90%</span>
+                            </div>
+
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div>
+                            </div>
                         </div>
+
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-blue-300">Computer Vision</span>
+                                <span class="text-blue-400">70%</span>
+                            </div>
+
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-blue-300">FastAPI</span>
+                                <span class="text-blue-400">75%</span>
+                            </div>
+
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">NumPy</span>
-                            <span class="text-blue-400">100%</span>
+
+                    <!-- Column 3 -->
+                    <div data-aos="fade-up" data-aos-delay="300">
+
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-blue-300">SQL</span>
+                                <span class="text-blue-400">75%</span>
+                            </div>
+
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div>
+                            </div>
                         </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5">
-                            <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 100%"></div>
+
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-blue-300">Git & GitHub</span>
+                                <span class="text-blue-400">70%</span>
+                            </div>
+
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div>
+                            </div>
                         </div>
+
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-blue-300">Postman / API Testing</span>
+                                <span class="text-blue-400">65%</span>
+                            </div>
+
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-2">
+                                <span class="text-blue-300">Jira / Scrum</span>
+                                <span class="text-blue-400">60%</span>
+                            </div>
+
+                            <div class="w-full bg-slate-800 rounded-full h-2.5">
+                                <div class="skill-bar bg-blue-600 h-2.5 rounded-full" style="width: 60%"></div>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="mb-6">
-                        <div class="flex justify-between mb-2">
-                            <span class="text-gray-300">Scikit-learn</span>
-                            <span class="text-blue-400">80%</span>
+
+                </div>
+
+                <!-- Extra Skills Tags -->
+                <div class="mt-12" data-aos="fade-up">
+                    <h3 class="text-xl font-semibold text-blue-200 mb-6 text-center">
+                        Tools & Concepts
+                    </h3>
+
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span class="px-4 py-2 rounded-full bg-blue-950/70 text-blue-300 border border-blue-500/30">Git</span>
+                        <span class="px-4 py-2 rounded-full bg-blue-950/70 text-blue-300 border border-blue-500/30">GitHub</span>
+                        <span class="px-4 py-2 rounded-full bg-blue-950/70 text-blue-300 border border-blue-500/30">Scrum</span>
+                        <span class="px-4 py-2 rounded-full bg-blue-950/70 text-blue-300 border border-blue-500/30">Teamwork</span>
+                        <span class="px-4 py-2 rounded-full bg-blue-950/70 text-blue-300 border border-blue-500/30">Project Management Tools</span>
+                        <span class="px-4 py-2 rounded-full bg-blue-950/70 text-blue-300 border border-blue-500/30">Jira Basic</span>
+                        <span class="px-4 py-2 rounded-full bg-blue-950/70 text-blue-300 border border-blue-500/30">REST API</span>
+                        <span class="px-4 py-2 rounded-full bg-blue-950/70 text-blue-300 border border-blue-500/30">Testing Basics</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="glass-effect p-8">
+                <h2 class="text-3xl font-bold text-center mb-16 text-blue-100" data-aos="fade-up">
+                    My <span class="text-blue-400">Projects</span>
+                </h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Project 1 -->
+                    <div class="project-card glass-effect p-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="mb-4 text-blue-400">
+                            <i data-feather="bar-chart-2" class="w-10 h-10"></i>
                         </div>
-                              style="max-width: 320px; width: 100%; height: auto;">
-                              Your browser does not support the video tag.
-                            </video>
-                        
-                            <p class="mt-4 text-gray-400">
-                              <a href="https://github.com/sepehr21ar/assets/raw/main/grok-video-452bcae9-83a9-42d9-8ddc-d16ab9414646.mp4"
-                                 target="_blank"
-                                 class="text-blue-400 hover:text-blue-300 underline">
-                                 Click here if the video doesn’t load
-                              </a>
-                            </p>
-                          </div>
-                        </section>
+
+                        <h3 class="text-xl font-bold text-blue-200 mb-3">
+                            Data Analysis Dashboard
+                        </h3>
+
+                        <p class="text-blue-100 mb-4">
+                            A data analysis project using Python, Pandas, NumPy, and visualization tools
+                            to extract insights from real-world datasets.
+                        </p>
+
+                        <a href="https://github.com/sepehr21ar"
+                           target="_blank"
+                           class="text-blue-400 hover:text-blue-300 underline">
+                            View on GitHub
+                        </a>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-effect p-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="mb-4 text-blue-400">
+                            <i data-feather="cpu" class="w-10 h-10"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-blue-200 mb-3">
+                            Machine Learning Models
+                        </h3>
+
+                        <p class="text-blue-100 mb-4">
+                            Classification and regression models built with Scikit-learn for prediction,
+                            evaluation, and data-driven decision making.
+                        </p>
+
+                        <a href="https://github.com/sepehr21ar"
+                           target="_blank"
+                           class="text-blue-400 hover:text-blue-300 underline">
+                            View on GitHub
+                        </a>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-effect p-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="mb-4 text-blue-400">
+                            <i data-feather="server" class="w-10 h-10"></i>
+                        </div>
+
+                        <h3 class="text-xl font-bold text-blue-200 mb-3">
+                            FastAPI Backend Project
+                        </h3>
+
+                        <p class="text-blue-100 mb-4">
+                            Backend application using FastAPI, database integration, API routes,
+                            authentication basics, and deployment-ready structure.
+                        </p>
+
+                        <a href="https://github.com/sepehr21ar"
+                           target="_blank"
+                           class="text-blue-400 hover:text-blue-300 underline">
+                            View on GitHub
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="glass-effect p-8 text-center">
+                <h2 class="text-3xl font-bold text-blue-100 mb-8" data-aos="fade-up">
+                    Featured <span class="text-blue-400">Video</span>
+                </h2>
+
+                <div class="flex justify-center" data-aos="fade-up" data-aos-delay="100">
+                    <video controls style="max-width: 520px; width: 100%; height: auto; border-radius: 16px;"
+                           class="border border-blue-500/30 shadow-2xl">
+                        <source src="https://github.com/sepehr21ar/assets/raw/main/grok-video-452bcae9-83a9-42d9-8ddc-d16ab9414646.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <p class="mt-4 text-blue-200">
+                    <a href="https://github.com/sepehr21ar/assets/raw/main/grok-video-452bcae9-83a9-42d9-8ddc-d16ab9414646.mp4"
+                       target="_blank"
+                       class="text-blue-400 hover:text-blue-300 underline">
+                        Click here if the video doesn’t load
+                    </a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="glass-effect p-8 text-center">
+                <h2 class="text-3xl font-bold text-blue-100 mb-6" data-aos="fade-up">
+                    Contact <span class="text-blue-400">Me</span>
+                </h2>
+
+                <p class="text-blue-100 mb-8 max-w-xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Interested in data analysis, machine learning, or backend projects?
+                    Feel free to connect with me.
+                </p>
+
+                <div class="flex flex-wrap justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="mailto:sepehr.asgarian21@gmail.com"
+                       class="bg-blue-600 hover:bg-blue-700 text-blue-50 px-6 py-3 rounded-lg transition flex items-center gap-2">
+                        <i data-feather="mail"></i>
+                        Email
+                    </a>
+
+                    <a href="https://github.com/sepehr21ar"
+                       target="_blank"
+                       class="border border-blue-400 text-blue-300 hover:bg-blue-950 px-6 py-3 rounded-lg transition flex items-center gap-2">
+                        <i data-feather="github"></i>
+                        GitHub
+                    </a>
+
+                    <a href="https://www.linkedin.com/"
+                       target="_blank"
+                       class="border border-blue-400 text-blue-300 hover:bg-blue-950 px-6 py-3 rounded-lg transition flex items-center gap-2">
+                        <i data-feather="linkedin"></i>
+                        LinkedIn
+                    </a>
                 </div>
             </div>
         </div>
@@ -157,14 +500,18 @@
 
     <!-- Footer -->
     <footer class="py-8">
-        <div class="container mx-auto px-6 text-center glass-effect p-4">
-            <p class="text-gray-400">© 2023 Sepehr Asgarian. All rights reserved.</p>
+        <div class="container mx-auto px-6">
+            <div class="text-center glass-effect p-4">
+                <p class="text-blue-200">
+                    © 2026 Sepehr Asgarian. All rights reserved.
+                </p>
+            </div>
         </div>
     </footer>
 
     <script>
         // Initialize Vanta.js animated background
-        if (document.getElementById('vanta-bg')) {
+        if (document.getElementById("vanta-bg")) {
             VANTA.NET({
                 el: "#vanta-bg",
                 mouseControls: true,
@@ -175,35 +522,44 @@
                 scale: 1.00,
                 scaleMobile: 1.00,
                 color: 0x3b82f6,
-                backgroundColor: 0x111827,
+                backgroundColor: 0x020617,
                 points: 12.00,
                 maxDistance: 23.00,
                 spacing: 18.00
             });
         }
+
         // Initialize AOS animations
         AOS.init({
             duration: 800,
-            easing: 'ease-in-out',
+            easing: "ease-in-out",
             once: true
         });
-        // Initialize feather icons
+
+        // Initialize Feather icons
         feather.replace();
+
         // Animate skill bars on scroll
-        document.addEventListener('DOMContentLoaded', function() {
-            const skillBars = document.querySelectorAll('.skill-bar');
-            
+        document.addEventListener("DOMContentLoaded", function () {
+            const skillBars = document.querySelectorAll(".skill-bar");
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         const width = entry.target.style.width;
-                        entry.target.style.width = '0';
+                        entry.target.style.width = "0";
+
                         setTimeout(() => {
                             entry.target.style.width = width;
                         }, 100);
+
+                        observer.unobserve(entry.target);
                     }
                 });
-            }, {threshold: 0.5});
+            }, {
+                threshold: 0.5
+            });
+
             skillBars.forEach(bar => {
                 observer.observe(bar);
             });
