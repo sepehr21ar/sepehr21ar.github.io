@@ -23,31 +23,35 @@
     <div class="flex items-center justify-between">
       <h1 class="text-2xl font-bold text-blue-400">Sepehr Asgarian</h1>
 
-      <div class="hidden md:flex gap-8">
+      <div class="hidden md:flex gap-8 nav-links">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#demo">Demo</a>
         <a href="#contact">Contact</a>
       </div>
 
-      <button class="md:hidden">
+      <button class="md:hidden menu-btn" aria-label="Open menu">
         <i data-feather="menu"></i>
       </button>
     </div>
   </nav>
 
   <main>
+    <!-- Hero -->
     <section class="hero container mx-auto px-6 py-24">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div data-aos="fade-right">
-          <p class="text-blue-400 font-semibold mb-4">Computer Engineering Student</p>
+          <p class="text-blue-400 font-semibold mb-4">
+            Computer Engineering Student
+          </p>
 
           <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
             Building Smart Apps with
             <span class="golden-text">AI, Data & Backend</span>
           </h2>
 
-          <p class="text-gray-300 text-lg mb-8">
+          <p class="text-gray-300 text-lg mb-8 leading-8">
             I’m Sepehr Asgarian, focused on Python, Machine Learning, FastAPI,
             SQL, and building real-world software projects that solve practical problems.
           </p>
@@ -68,59 +72,72 @@
       </div>
     </section>
 
+    <!-- About -->
     <section id="about" class="container mx-auto px-6 py-16">
       <div class="glass-effect section-card" data-aos="fade-up">
         <h2 class="section-title">About Me</h2>
+
         <p class="text-gray-300 leading-8">
           I’m a Computer Engineering student interested in Machine Learning,
-          data-driven applications, backend development, and AI agents.
-          My goal is to build useful projects and grow toward Data Science,
-          ML Engineering, and intelligent software systems.
+          backend development, databases, and building practical software.
+          I enjoy turning ideas into real projects using Python, FastAPI, SQL,
+          and AI tools.
+        </p>
+
+        <p class="text-gray-300 leading-8 mt-4">
+          My current focus is improving my skills in Machine Learning,
+          API development, database design, and AI-powered applications.
+          I like projects that combine data, automation, and useful user interfaces.
         </p>
       </div>
     </section>
 
+    <!-- Skills -->
     <section id="skills" class="container mx-auto px-6 py-16">
       <div class="glass-effect section-card" data-aos="fade-up">
         <h2 class="section-title">Skills</h2>
 
-        <div class="grid md:grid-cols-3 gap-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           <div class="skill-card">Python</div>
           <div class="skill-card">Machine Learning</div>
           <div class="skill-card">FastAPI</div>
-          <div class="skill-card">SQL / Databases</div>
-          <div class="skill-card">Pandas & NumPy</div>
-          <div class="skill-card">LangChain / AI Agents</div>
+          <div class="skill-card">SQL</div>
+          <div class="skill-card">Pandas</div>
+          <div class="skill-card">NumPy</div>
+          <div class="skill-card">Data Analysis</div>
+          <div class="skill-card">AI Agents</div>
         </div>
       </div>
     </section>
 
+    <!-- Projects -->
     <section id="projects" class="container mx-auto px-6 py-16">
       <div class="glass-effect section-card" data-aos="fade-up">
         <h2 class="section-title">Projects</h2>
 
-        <div class="grid md:grid-cols-2 gap-8">
+        <div class="grid lg:grid-cols-2 gap-8">
           <article class="project-card">
             <img
               src="https://raw.githubusercontent.com/sepehr21ar/sepehr21ar.github.io/main/Screenshot%202026-06-30%20211317.png"
-              alt="Digital Menu App"
+              alt="Digital Menu Maker project"
               class="project-img"
             />
 
             <div class="p-6">
               <h3 class="text-2xl font-bold mb-3 text-blue-400">
-                Digital Restaurant Menu
+                Digital Menu Maker
               </h3>
 
-              <p class="text-gray-300 mb-4">
-                A FastAPI web app for restaurants to create digital menus with
-                categories, items, prices, images, and QR-based access.
+              <p class="text-gray-300 mb-4 leading-7">
+                A restaurant digital menu project with owner authentication,
+                categories, products, images, prices, and public menu pages.
               </p>
 
               <div class="flex flex-wrap gap-2">
                 <span class="tag">FastAPI</span>
                 <span class="tag">SQLite</span>
-                <span class="tag">HTML/CSS</span>
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
               </div>
             </div>
           </article>
@@ -137,7 +154,7 @@
                 Store Management System
               </h3>
 
-              <p class="text-gray-300 mb-4">
+              <p class="text-gray-300 mb-4 leading-7">
                 A store dashboard project with product management, inventory,
                 sales reports, SQL queries, and AI-powered data analysis.
               </p>
@@ -146,6 +163,7 @@
                 <span class="tag">Python</span>
                 <span class="tag">SQL</span>
                 <span class="tag">AI Agent</span>
+                <span class="tag">Dashboard</span>
               </div>
             </div>
           </article>
@@ -153,6 +171,7 @@
       </div>
     </section>
 
+    <!-- Demo -->
     <section id="demo" class="container mx-auto px-6 py-16">
       <div class="glass-effect section-card text-center" data-aos="fade-up">
         <h2 class="section-title">Demo Video</h2>
@@ -171,6 +190,7 @@
       </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact" class="container mx-auto px-6 py-16">
       <div class="glass-effect section-card" data-aos="fade-up">
         <h2 class="section-title">Contact</h2>
@@ -188,7 +208,7 @@
             <i data-feather="github"></i>
             <div>
               <h3>GitHub</h3>
-              <a href="https://github.com/sepehr21ar" target="_blank">
+              <a href="https://github.com/sepehr21ar" target="_blank" rel="noopener noreferrer">
                 github.com/sepehr21ar
               </a>
             </div>
@@ -198,7 +218,7 @@
             <i data-feather="linkedin"></i>
             <div>
               <h3>LinkedIn</h3>
-              <a href="https://www.linkedin.com/in/sepehr21ar" target="_blank">
+              <a href="https://www.linkedin.com/in/sepehr21ar" target="_blank" rel="noopener noreferrer">
                 linkedin.com/in/sepehr21ar
               </a>
             </div>
