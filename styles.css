@@ -11,12 +11,23 @@ body {
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
   color: #f8fafc;
   background: #0f172a;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(250, 204, 21, 0.12), transparent 35%);
+  z-index: -2;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  transition: 0.25s;
+  transition: 0.25s ease;
 }
 
 a:hover {
@@ -43,6 +54,20 @@ a:hover {
   position: sticky;
   top: 16px;
   z-index: 10;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #60a5fa;
+}
+
+.menu-btn {
+  display: inline-flex;
+  color: #e2e8f0;
 }
 
 .golden-text {
@@ -72,12 +97,14 @@ a:hover {
   padding: 13px 22px;
   border-radius: 999px;
   font-weight: 700;
+  transition: 0.25s ease;
 }
 
 .btn-primary {
   background: #2563eb;
   color: white;
-  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.35);
+  border: 1px solid rgba(96, 165, 250, 0.55);
+  box-shadow: 0 14px 35px rgba(37, 99, 235, 0.3);
 }
 
 .btn-primary:hover {
@@ -89,11 +116,13 @@ a:hover {
 .btn-secondary {
   border: 1px solid rgba(96, 165, 250, 0.45);
   color: #bfdbfe;
+  background: rgba(15, 23, 42, 0.35);
 }
 
 .btn-secondary:hover {
   background: rgba(37, 99, 235, 0.16);
   color: white;
+  transform: translateY(-2px);
 }
 
 .profile-card {
@@ -126,6 +155,13 @@ a:hover {
   color: #e2e8f0;
   font-weight: 700;
   text-align: center;
+  transition: 0.25s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(96, 165, 250, 0.45);
+  background: rgba(37, 99, 235, 0.18);
 }
 
 .project-card {
@@ -159,7 +195,7 @@ a:hover {
 
 .demo-video {
   width: 100%;
-  max-width: 340px;
+  max-width: 420px;
   border-radius: 22px;
   border: 1px solid rgba(96, 165, 250, 0.3);
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
@@ -173,10 +209,17 @@ a:hover {
   border-radius: 18px;
   background: rgba(30, 41, 59, 0.7);
   border: 1px solid rgba(148, 163, 184, 0.18);
+  transition: 0.25s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(96, 165, 250, 0.4);
 }
 
 .contact-item svg {
   color: #60a5fa;
+  min-width: 24px;
 }
 
 .contact-item h3 {
@@ -190,6 +233,16 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .nav-box {
+    margin-top: 12px;
+    top: 10px;
+  }
+
+  .hero {
+    padding-top: 64px;
+    padding-bottom: 56px;
+  }
+
   .section-card {
     padding: 22px;
   }
@@ -201,5 +254,8 @@ a:hover {
   .project-img {
     height: 210px;
   }
-}
 
+  .contact-item {
+    align-items: flex-start;
+  }
+}
