@@ -1,3 +1,18 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #0f172a;
+}
+
+/* Added glass effect since it was missing from your CSS snippet */
+.glass-effect {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
 .golden-text {
   background: linear-gradient(90deg, #facc15, #fb923c, #38bdf8, #facc15);
   background-size: 220% auto;
@@ -11,7 +26,6 @@
   0% {
     background-position: -200%;
   }
-
   100% {
     background-position: 200%;
   }
@@ -26,6 +40,7 @@
   border-radius: 999px;
   font-weight: 700;
   transition: 0.25s ease;
+  text-decoration: none;
 }
 
 .btn-primary {
