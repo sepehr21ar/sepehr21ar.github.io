@@ -17,27 +17,27 @@
 </head>
 
 <body>
-  <div id="vanta-bg"></div>
+  <div id="vanta-bg" style="position: fixed; z-index: -1; top: 0; left: 0; width: 100%; height: 100%;"></div>
 
-  <nav class="container mx-auto px-6 py-4 glass-effect nav-box">
+  <nav class="container mx-auto px-6 py-4 glass-effect nav-box relative z-10">
     <div class="flex items-center justify-between">
       <h1 class="text-2xl font-bold text-blue-400">Sepehr Asgarian</h1>
 
-      <div class="hidden md:flex gap-8 nav-links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#demo">Demo</a>
-        <a href="#contact">Contact</a>
+      <div class="hidden md:flex gap-8 nav-links text-white font-medium">
+        <a href="#about" class="hover:text-blue-400 transition">About</a>
+        <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+        <a href="#demo" class="hover:text-blue-400 transition">Demo</a>
+        <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
       </div>
 
-      <button class="md:hidden menu-btn" aria-label="Open menu">
+      <button class="md:hidden menu-btn text-white" aria-label="Open menu">
         <i data-feather="menu"></i>
       </button>
     </div>
   </nav>
 
-  <main>
+  <main class="relative z-10">
     <section class="hero container mx-auto px-6 py-24">
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div data-aos="fade-right">
@@ -45,7 +45,7 @@
             Computer Engineering Student
           </p>
 
-          <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
+          <h2 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-6">
             Building Smart Apps with
             <span class="golden-text">AI, Data & Backend</span>
           </h2>
@@ -63,112 +63,47 @@
 
         <div class="profile-card glass-effect" data-aos="fade-left">
           <img
-            src="https://raw.githubusercontent.com/sepehr21ar/sepehr21ar.github.io/main/Screenshot%202026-06-30%20211317.png"
-            alt="Menu project preview"
+            src="https://via.placeholder.com/600x400/1e293b/38bdf8?text=Profile+Photo"
+            alt="Sepehr Asgarian"
             class="hero-image"
           />
         </div>
       </div>
     </section>
 
-    <section id="about" class="container mx-auto px-6 py-16">
-      <div class="glass-effect section-card" data-aos="fade-up">
-        <h2 class="section-title">About Me</h2>
-
-        <p class="text-gray-300 leading-8">
-          I’m a Computer Engineering student interested in Machine Learning,
-          backend development, databases, and building practical software.
-          I enjoy turning ideas into real projects using Python, FastAPI, SQL,
-          and AI tools.
-        </p>
-
-        <p class="text-gray-300 leading-8 mt-4">
-          My current focus is improving my skills in Machine Learning,
-          API development, database design, and AI-powered applications.
-        </p>
-      </div>
-    </section>
-
-    <section id="skills" class="container mx-auto px-6 py-16">
-      <div class="glass-effect section-card" data-aos="fade-up">
-        <h2 class="section-title">Skills</h2>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          <div class="skill-card">Python</div>
-          <div class="skill-card">Machine Learning</div>
-          <div class="skill-card">FastAPI</div>
-          <div class="skill-card">SQL</div>
-          <div class="skill-card">Pandas</div>
-          <div class="skill-card">NumPy</div>
-          <div class="skill-card">Data Analysis</div>
-          <div class="skill-card">AI Agents</div>
-        </div>
-      </div>
-    </section>
-
     <section id="projects" class="container mx-auto px-6 py-16">
       <div class="glass-effect section-card" data-aos="fade-up">
-        <h2 class="section-title">Projects</h2>
+        <article class="grid lg:grid-cols-2 gap-8 items-center">
+          <img
+            src="https://raw.githubusercontent.com/sepehr21ar/sepehr21ar.github.io/main/Screenshot%202026-06-30%20211317.png"
+            alt="Store Management App"
+            class="hero-image"
+          />
 
-        <div class="grid lg:grid-cols-2 gap-8">
-          <article class="project-card">
-            <img
-              src="https://raw.githubusercontent.com/sepehr21ar/sepehr21ar.github.io/main/Screenshot%202026-06-30%20211317.png"
-              alt="Digital Menu Maker project"
-              class="project-img"
-            />
+          <div class="p-6">
+            <h3 class="text-2xl font-bold mb-3 text-blue-400">
+              Store Management System
+            </h3>
 
-            <div class="p-6">
-              <h3 class="text-2xl font-bold mb-3 text-blue-400">
-                Digital Menu Maker
-              </h3>
+            <p class="text-gray-300 mb-4 leading-7">
+              A store dashboard project with product management, inventory,
+              sales reports, SQL queries, and AI-powered data analysis.
+            </p>
 
-              <p class="text-gray-300 mb-4 leading-7">
-                A restaurant digital menu project with owner authentication,
-                categories, products, images, prices, and public menu pages.
-              </p>
-
-              <div class="flex flex-wrap gap-2">
-                <span class="tag">FastAPI</span>
-                <span class="tag">SQLite</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-              </div>
+            <div class="flex flex-wrap gap-2 text-sm font-semibold">
+              <span class="bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full border border-blue-700/50">Python</span>
+              <span class="bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full border border-blue-700/50">SQL</span>
+              <span class="bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full border border-blue-700/50">AI Agent</span>
+              <span class="bg-blue-900/50 text-blue-300 px-3 py-1 rounded-full border border-blue-700/50">Dashboard</span>
             </div>
-          </article>
-
-          <article class="project-card">
-            <img
-              src="https://img.magnific.com/free-vector/store-grocery-shop-building-isolated-white-background_1284-14054.jpg?semt=ais_hybrid&w=740&q=80"
-              alt="Store Management App"
-              class="project-img"
-            />
-
-            <div class="p-6">
-              <h3 class="text-2xl font-bold mb-3 text-blue-400">
-                Store Management System
-              </h3>
-
-              <p class="text-gray-300 mb-4 leading-7">
-                A store dashboard project with product management, inventory,
-                sales reports, SQL queries, and AI-powered data analysis.
-              </p>
-
-              <div class="flex flex-wrap gap-2">
-                <span class="tag">Python</span>
-                <span class="tag">SQL</span>
-                <span class="tag">AI Agent</span>
-                <span class="tag">Dashboard</span>
-              </div>
-            </div>
-          </article>
-        </div>
+          </div>
+        </article>
       </div>
     </section>
 
     <section id="demo" class="container mx-auto px-6 py-16">
       <div class="glass-effect section-card text-center" data-aos="fade-up">
-        <h2 class="section-title">Demo Video</h2>
+        <h2 class="text-3xl font-bold text-white mb-8">Demo Video</h2>
 
         <video
           src="https://github.com/sepehr21ar/assets/raw/main/grok-video-452bcae9-83a9-42d9-8ddc-d16ab9414646.mp4"
@@ -176,7 +111,7 @@
           muted
           loop
           playsinline
-          class="demo-video"
+          class="w-full rounded-xl border border-blue-400/25 shadow-2xl"
         >
           Your browser does not support the video tag.
         </video>
@@ -185,41 +120,41 @@
 
     <section id="contact" class="container mx-auto px-6 py-16">
       <div class="glass-effect section-card" data-aos="fade-up">
-        <h2 class="section-title">Contact</h2>
+        <h2 class="text-3xl font-bold text-white mb-8">Contact</h2>
 
         <div class="grid md:grid-cols-2 gap-8">
-          <div class="contact-item">
-            <i data-feather="map-pin"></i>
+          <div class="flex items-center gap-4 text-gray-300">
+            <i data-feather="map-pin" class="text-blue-400"></i>
             <div>
-              <h3>Location</h3>
+              <h3 class="font-bold text-white">Location</h3>
               <p>Tehran, Iran</p>
             </div>
           </div>
 
-          <div class="contact-item">
-            <i data-feather="github"></i>
+          <div class="flex items-center gap-4 text-gray-300">
+            <i data-feather="github" class="text-blue-400"></i>
             <div>
-              <h3>GitHub</h3>
-              <a href="https://github.com/sepehr21ar" target="_blank" rel="noopener noreferrer">
+              <h3 class="font-bold text-white">GitHub</h3>
+              <a href="https://github.com/sepehr21ar" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition">
                 github.com/sepehr21ar
               </a>
             </div>
           </div>
 
-          <div class="contact-item">
-            <i data-feather="linkedin"></i>
+          <div class="flex items-center gap-4 text-gray-300">
+            <i data-feather="linkedin" class="text-blue-400"></i>
             <div>
-              <h3>LinkedIn</h3>
-              <a href="https://www.linkedin.com/in/sepehr21ar" target="_blank" rel="noopener noreferrer">
+              <h3 class="font-bold text-white">LinkedIn</h3>
+              <a href="https://www.linkedin.com/in/sepehr21ar" target="_blank" rel="noopener noreferrer" class="hover:text-blue-400 transition">
                 linkedin.com/in/sepehr21ar
               </a>
             </div>
           </div>
 
-          <div class="contact-item">
-            <i data-feather="mail"></i>
+          <div class="flex items-center gap-4 text-gray-300">
+            <i data-feather="mail" class="text-blue-400"></i>
             <div>
-              <h3>Email</h3>
+              <h3 class="font-bold text-white">Email</h3>
               <p>Available on request</p>
             </div>
           </div>
@@ -228,8 +163,8 @@
     </section>
   </main>
 
-  <footer class="container mx-auto px-6 py-8 text-center">
-    <div class="glass-effect p-4">
+  <footer class="container mx-auto px-6 py-8 text-center relative z-10">
+    <div class="glass-effect p-4 rounded-xl">
       <p class="text-gray-400">© 2026 Sepehr Asgarian. All rights reserved.</p>
     </div>
   </footer>
